@@ -1,23 +1,32 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <transition>
+      <router-view/>
+    </transition>
+    <app-loading :loading="pageLoading"/>
   </div>
 </template>
 
 <script>
+  import appLoading from '@/components/widget/appLoading.vue'
+  import { mapGetters } from 'vuex'
   export default {
-    name: 'App'
+    data () {
+      return {}
+    },
+    computed: {
+      ...mapGetters({
+        pageLoading: 'pageLoading'
+      })
+    },
+    created: function () {
+    },
+    mounted: function () {
+      $('#app_loading').remove()
+    },
+    components: {
+      'app-loading': appLoading
+    },
+    methods: {}
   }
 </script>
-
-<style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
-</style>

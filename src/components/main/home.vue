@@ -1,5 +1,8 @@
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <div @click="goFoo">跳转到goFoo</div>
+    <div @click="goFoo2">跳转到goFoo2</div>
+  </div>
 </template>
 
 <script>
@@ -17,7 +20,17 @@
     },
     methods: {
       showToast: function () {
-        Toast('提示信息')
+        Toast('进入到Home')
+      },
+      goFoo: function () {
+        this.$router.push({
+          path: '/foo/111/555'
+        })
+      },
+      goFoo2: function () {
+        this.$router.push({
+          path: '/foo/3333/8888'
+        })
       }
     }
   }

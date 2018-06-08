@@ -1,0 +1,451 @@
+::-webkit-scrollbar
+  width: 0;
+  height: 0;
+  background-color: #F5F5F5;
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: auto;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:not(input,textarea)
+  -webkit-touch-callout: none;
+  -webkit-user-select: auto;
+
+html, body
+  font-family: sans-serif
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: auto;
+  width: 100%;
+
+body
+  width: 100%;
+  color: c_text;
+  font: 30px 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  position: relative;
+  background: c_bg;
+  word-break: break-all;
+  -webkit-overflow-scrolling: touch;
+  min-height: 100vh;
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  margin: 0;
+  padding: 0
+
+input, select, textarea
+  font-size: 100%
+
+input, textarea, keygen, select, button
+  font-family inherit
+
+input[type=search]
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  font-family: inherit;
+  font-size: 100%;
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button
+  display: none;
+
+table
+  s-bcollapse: collapse;
+  s-bspacing: 0
+
+fieldset, img
+  border: 0
+
+abbr, acronym
+  border: 0;
+  font-variant: normal
+
+del
+  text-decoration: line-through
+
+address, caption, cite, code, dfn, em, th, var
+  font-style: normal;
+  font-weight: 500
+
+ol, ul
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+caption, th
+  text-align: left
+
+h1, h2, h3, h4, h5, h6
+  font-size: 100%;
+  font-weight: 500
+
+q:before, q:after
+  content: ''
+
+sub, sup
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+
+sup
+  top: -.5em
+
+sub
+  bottom: -.25em
+
+a:hover
+  text-decoration: none
+
+a
+  color #464646
+
+ins, a
+  text-decoration: none
+
+a:visited
+  color: inherit
+
+.g-mn
+  overflow: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background: c_bg;
+
+img
+  pointer-events: none;
+
+img[srci]
+  pointer-events: inherit;
+
+/*常用*/
+.mt-30
+  margin-top 30px
+
+.mt-20
+  margin-top 20px
+
+.mb-20
+  margin-bottom 20px
+
+.f-cb:after
+  display table
+  content: ''
+  clear both
+
+.c-normal
+  color: c_style
+
+.c-dark
+  color: c_dark
+
+.icon-vt
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+
+.s-tl
+  text-align left
+
+.s-tc
+  text-align center
+
+.s-tr
+  text-align right
+
+.s-fr
+  float right
+
+.s-fl
+  float left
+
+/*按钮样式*/
+.u-btn
+  appearance: none;
+  border: none;
+  width: 400px;
+  height: 98px;
+  line-height 98px
+  font-size 30px
+  text-align center
+  color #fff
+  letter-spacing 1px
+  background-color: c_style;
+  box-shadow: 6px 11px 27px 0px rgba(193, 0, 0, 0.25);
+  border-radius: 50px;
+  position relative
+  overflow hidden
+  &::after
+    background-color: #fff;
+    content: " ";
+    opacity: 0;
+    position: absolute;
+    left 0
+    right 0
+    top 0
+    bottom 0
+  &:not(.is-disabled):active::after
+    opacity: .2
+  &.is-plain
+    border: 1px solid #e5e5e5;
+    background-color: transparent;
+    box-shadow: none;
+    color: c_text;
+  &.btn-sm
+    width: 150px;
+    height: 60px;
+    line-height 60px
+    font-size 30px
+/*底部按钮样式*/
+.btm-btn-ctn
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100px;
+  z-index: 60;
+ .btn-tab
+  display: flex;
+  flex-wrap: nowrap;
+  align-self: center;
+  position: relative;
+  li
+    background c_style
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    overflow: hidden;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+    flex:1
+   .btn-text
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+
+.btn-tab li:active, .btn-tab li:focus, .tap-mode:active, .tap-mode:focus
+  opacity: 0.8
+
+.btm-btn-ctn .btn-disable:active, .btm-btn-ctn .btn-disable:focus
+  opacity: 1
+
+.btm-btn-p
+  height: 100px;
+
+/*边框样式*/
+.s-bt,
+.s-bb,
+.s-bl,
+.s-br,
+.s-btb,
+.s-b {
+  position: relative;
+}
+
+.s-bl:before, .s-br:after {
+  width: 1px;
+  height: 100%;
+  background-color: c_border;
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: auto;
+  transform-origin: 100% 100%;
+  pointer-events: none;
+}
+
+.s-bt:before {
+  width: 100%;
+  height: 1px;
+  background-color: c_border;
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: auto;
+  transform-origin: 100% -50%;
+  pointer-events: none;
+}
+
+.s-bb:after {
+  width: 100%;
+  height: 1px;
+  background-color: c_border;
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: auto;
+  transform-origin: 100% 100%;
+  pointer-events: none;
+}
+
+.s-bl:before {
+  right: auto;
+  left: 0;
+}
+
+.s-br:after {
+  right: 0;
+  left: auto;
+}
+
+.s-bt:before {
+  bottom: auto;
+  top: 0;
+}
+
+.s-bb:after {
+  bottom: 0;
+  top: auto;
+}
+
+.s-b:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: auto;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: scale(1);
+  pointer-events: none;
+  border: 1px solid #dddddd;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .s-b:after {
+    right: -100%;
+    bottom: -100%;
+    -webkit-transform: scale(0.5);
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .s-br:after,
+  .s-bl:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+  .s-bb:after {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .s-br:after,
+  .s-bl:before {
+    -webkit-transform: scaleX(0.333);
+    transform: scaleX(0.333);
+  }
+
+  .s-bb:after, .s-bt:before {
+    -webkit-transform: scaleY(0.333);
+    transform: scaleY(0.333);
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  .s-br:after,
+  .s-bl:before {
+    -webkit-transform: scaleX(0.333);
+    transform: scaleX(0.333);
+  }
+
+  .s-bb:after, .s-bt:before {
+    -webkit-transform: scaleY(0.333);
+    transform: scaleY(0.333);
+  }
+}
+
+/**按压响应**/
+.tap-mode:active, .tap-mode:focus
+  color: #a2a9b6 !important;
+
+.tap-mode-bg:active, .tap-mode-bg:focus
+  background-color: #f5f5f5 !important;
+  transition: background-color 0.2s linear;
+
+.tap-mode-op
+  opacity: 1;
+
+.tap-mode-op:active, .tap-mode-op:focus
+  opacity: .8;
+
+/*...*/
+.ellipsis-1
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+.ellipsis-2
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+/*flex布局*/
+.g-flex
+  display: flex;
+  justify-content: space-between;
+  position relative
+  &.align-c
+    align-items center
+  .arrow
+    color: #a8a8a8
+    font-size 36px
+  .arrow-r
+    color: #a8a8a8
+
+.g-flex-c
+  flex 1
+  position relative
+  min-width 0
+
+/*组件样式*/
+.picker
+  //.picker-toolbar
+  //  height inherit
+  .toolbar
+    display flex
+    padding 20px 30px
+    justify-content flex-end
+    button
+      width 100px
+      border-radius 10px
+      height 70px
+      line-height 70px
+      box-shadow none
+
+/*toast样式修改*/
+.mint-toast-icon.iconfont
+  font-size 80px
+
+/*transition 动画*/
+.route-enter-active, .route-leave-active
+  position absolute
+  top 0
+  width 100%
+  transition: opacity .5s;
+
+.route-enter, .route-leave-to
+  opacity: 0;
