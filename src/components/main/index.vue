@@ -1,29 +1,37 @@
 <template>
   <div class="mn-idx-bd">
-    <div class="">
-      <transition>
-        <router-view></router-view>
-      </transition>
-    </div>
     <ul class="g-ft-navs">
-      <li>
-        <i class="iconfont icon-home"></i>
-        <p>首页</p>
+      <li @click="changeNavIdx(0)" :class="{'sel': navIdx === 0}">
+        <i class="iconfont"></i>
+        <p>推荐</p>
       </li>
-      <li>
-        <i class="iconfont icon-sort"></i>
+      <li @click="changeNavIdx(1)" :class="{'sel': navIdx === 1}">
+        <i class="iconfont"></i>
         <p>分类</p>
       </li>
-      <li>
-        <i class="iconfont icon-cart"></i>
-        <p>购物车</p>
+      <li @click="changeNavIdx(2)" :class="{'sel': navIdx === 2}">
+        <i class="iconfont"></i>
+        <p>排行</p>
       </li>
       <li>
-        <i class="iconfont icon-my"></i>
+        <i class="iconfont"></i>
+        <p>管理</p>
+      </li>
+      <li @click="changeNavIdx(4)" :class="{'sel': navIdx === 4}">
+        <i class="iconfont"></i>
         <p>我的</p>
       </li>
     </ul>
     <div class="g-ft-p"></div>
+    <div class="">
+      <transition>
+        <keep-alive v-if="$route.meta.keepAlive">
+          <router-view></router-view>
+        </keep-alive>
+        <router-view v-if="!$route.meta.keepAlive">
+        </router-view>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -31,7 +39,7 @@
   import wx from 'weixin-js-sdk'
   import wxApi from '@/api/wx'
 
-  const NAV_LINK = ['/home', '/classify', '/cart', '/my']
+  const NAV_LINK = ['/home', '/classify', '/rank', '/manager', '/my']
   export default {
     name: 'index',
     data () {
@@ -45,12 +53,6 @@
     components: {},
     async activated () {
       await this.initWx()
-    },
-    watch: {
-      '$route': async function (val) {
-        this.refreshNav()
-        await this.initWx()
-      }
     },
     created: async function () {
       this.refreshNav()
@@ -92,13 +94,15 @@
 </script>
 <!-- 11 -->
 <style lang="stylus" rel="stylesheet/stylus">
+  @import '../../assets/css/var.styl'
   .mn-idx-bd
     .g-ft-p
       height 98px
     .g-ft-navs
       position fixed
       left 0
-      bottom 0
+      top 0
+      /*bottom 0*/
       display flex
       height: 98px;
       background: #fff;
@@ -106,7 +110,7 @@
       position: fixed;
       width: 100%;
       z-index 3
-      box-shadow: 1px 1px 24px 0px #CAC9C9;
+      /*box-shadow: 1px 1px 24px 0px #CAC9C9;*/
       li
         flex 1
         text-align center

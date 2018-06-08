@@ -3,7 +3,9 @@ import Router from 'vue-router'
 
 import Index from '@/components/main/index.vue'
 import Home from '@/components/main/home.vue'
-import Foo from '@/components/main/foo.vue'
+import ClassifyIndex from '@/components/classify/index.vue'
+import RankIndex from '@/components/rank/index.vue'
+import My from '@/components/main/my.vue'
 
 Vue.use(Router)
 
@@ -14,16 +16,30 @@ const routes = [
     redirect: 'home',
     children: [
       {
+        // 主页
         path: 'home',
         component: Home,
         meta: {}
+      },
+      {
+        // 分类
+        path: 'classify',
+        component: ClassifyIndex,
+        meta: {}
+      },
+      {
+        // 排行
+        path: 'rank',
+        component: RankIndex,
+        meta: {}
+      },
+      {
+        // 我的
+        path: 'my',
+        component: My,
+        meta: {}
       }
     ]
-  },
-  {
-    name: 'foo',
-    path: '/foo/:id/:name',
-    component: Foo
   }
 ]
 
