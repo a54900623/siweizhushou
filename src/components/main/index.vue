@@ -63,7 +63,7 @@
           wxApi.initShare({
             title: that.homeInfo.name,
             desc: that.homeInfo.about,
-            link: location.origin + '/shop/home',
+            link: location.origin + '/siweizhushou/home',
             imgUrl: that.homeInfo.logo
           })
         })
