@@ -13,11 +13,7 @@
         <i class="iconfont"></i>
         <p>排行</p>
       </li>
-      <li>
-        <i class="iconfont"></i>
-        <p>管理</p>
-      </li>
-      <li @click="changeNavIdx(4)" :class="{'sel': navIdx === 4}">
+      <li @click="changeNavIdx(3)" :class="{'sel': navIdx === 3}">
         <i class="iconfont"></i>
         <p>我的</p>
       </li>
@@ -39,7 +35,7 @@
   import wx from 'weixin-js-sdk'
   import wxApi from '@/api/wx'
 
-  const NAV_LINK = ['/home', '/classify', '/rank', '/manager', '/my']
+  const NAV_LINK = ['/home', '/classify', '/rank', '/my']
   export default {
     name: 'index',
     data () {
@@ -127,4 +123,6 @@
           color: c_style
         .iconfont
           font-size 48px
+        p
+          font-size 30px
 </style>

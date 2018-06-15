@@ -1,0 +1,97 @@
+
+@font-face {
+  font-family: "iconfont";
+  src:url('iconfont.ttf?t=1525247672573') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+}
+
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:40px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check:before { content: "\e645"; }
+
+.icon-close:before { content: "\e646"; }
+
+.icon-edit:before { content: "\e649"; }
+
+.icon-favorfill:before { content: "\e64b"; }
+
+.icon-favor:before { content: "\e64c"; }
+
+.icon-location:before { content: "\e651"; }
+
+.icon-roundcheckfill:before { content: "\e656"; }
+
+.icon-roundclose:before { content: "\e659"; }
+
+.icon-search:before { content: "\e65c"; }
+
+.icon-unfold:before { content: "\e661"; }
+
+.icon-pay1:before { content: "\e673"; }
+
+.icon-shop:before { content: "\e676"; }
+
+.icon-back:before { content: "\e679"; }
+
+.icon-top1:before { content: "\e69e"; }
+
+.icon-right:before { content: "\e6a3"; }
+
+.icon-cart:before { content: "\e6af"; }
+
+.icon-delete:before { content: "\e6b4"; }
+
+.icon-home:before { content: "\e6b8"; }
+
+.icon-lock:before { content: "\e6c0"; }
+
+.icon-round:before { content: "\e6d7"; }
+
+.icon-roundadd:before { content: "\e6d9"; }
+
+.icon-fold:before { content: "\e6de"; }
+
+.icon-sort:before { content: "\e700"; }
+
+.icon-calendar:before { content: "\e74a"; }
+
+.icon-my:before { content: "\e78b"; }
+
+.icon-fenxiang:before { content: "\e602"; }
+
+.icon-daishouhuo:before { content: "\e604"; }
+
+.icon-text:before { content: "\e791"; }
+
+.icon-goumai:before { content: "\e605"; }
+
+.icon-homefill:before { content: "\e6fe"; }
+
+.icon-videofill:before { content: "\e7c8"; }
+
+.icon-video:before { content: "\e7c9"; }
+
+.icon-service:before { content: "\ee7a"; }
+
+.icon-fenxiangzhiyin:before { content: "\e617"; }
+
+.icon-daishouhuo1:before { content: "\e690"; }
+
+.icon-ordersucc:before { content: "\e63a"; }
+
+.icon-sort-up:before { content: "\e606"; }
+
+.icon-roundcheck:before { content: "\e603"; }
+
+.icon-sort-down:before { content: "\e607"; }
+
+.icon-jiaoyi:before { content: "\e667"; }
+
+.icon-bofang:before { content: "\e62c"; }
+

@@ -1,7 +1,9 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import '@/assets/css/font/iconfont.js'
 import '@/assets/css/mint-ui.css'
 import '@/assets/css/common.styl'
+import '@/assets/css/font/iconfont.css'
 import fastClick from 'fastClick'
 import Vue from 'vue'
 import router from './router'
