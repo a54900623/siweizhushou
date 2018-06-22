@@ -22,11 +22,9 @@
                 @error="errImg" alt=""></div>
               <div class="g-flex-c">
                 <p class="tt ellipsis-1">360手机</p>
-                <p class="item-desc">大小：14.37M</p>
-                <p class="item-desc">下载：100000次</p>
+                <p class="item-desc">14.37M</p>
               </div>
             </div>
-            <div class="item-down-btn">下载</div>
           </div>
         </li>
       </ul>
@@ -48,11 +46,9 @@
                 @error="errImg" alt=""></div>
               <div class="g-flex-c">
                 <p class="tt ellipsis-1">360手机</p>
-                <p class="item-desc">大小：14.37M</p>
-                <p class="item-desc">下载：100000次</p>
+                <p class="item-desc">14.37M</p>
               </div>
             </div>
-            <div class="item-down-btn">下载</div>
           </div>
         </li>
       </ul>
@@ -74,11 +70,9 @@
                 @error="errImg" alt=""></div>
               <div class="g-flex-c">
                 <p class="tt ellipsis-1">360手机</p>
-                <p class="item-desc">大小：14.37M</p>
-                <p class="item-desc">下载：100000次</p>
+                <p class="item-desc">14.37M</p>
               </div>
             </div>
-            <div class="item-down-btn">下载</div>
           </div>
         </li>
       </ul>
@@ -100,11 +94,9 @@
                 @error="errImg" alt=""></div>
               <div class="g-flex-c">
                 <p class="tt ellipsis-1">360手机</p>
-                <p class="item-desc">大小：14.37M</p>
-                <p class="item-desc">下载：100000次</p>
+                <p class="item-desc">14.37M</p>
               </div>
             </div>
-            <div class="item-down-btn">下载</div>
           </div>
         </li>
       </ul>

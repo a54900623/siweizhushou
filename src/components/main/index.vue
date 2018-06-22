@@ -3,7 +3,7 @@
     <ul class="g-ft-navs">
       <li @click="changeNavIdx(0)" :class="{'sel': navIdx === 0}">
         <i class="iconfont"></i>
-        <p>推荐</p>
+        <p>首页</p>
       </li>
       <li @click="changeNavIdx(1)" :class="{'sel': navIdx === 1}">
         <i class="iconfont"></i>
@@ -13,10 +13,10 @@
         <i class="iconfont"></i>
         <p>排行</p>
       </li>
-      <li @click="changeNavIdx(3)" :class="{'sel': navIdx === 3}">
+      <!--<li @click="changeNavIdx(3)" :class="{'sel': navIdx === 3}">
         <i class="iconfont"></i>
         <p>我的</p>
-      </li>
+      </li>-->
     </ul>
     <div class="g-ft-p"></div>
     <div class="">
