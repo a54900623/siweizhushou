@@ -2,9 +2,7 @@
 <template>
   <div class="classify-bd">
     <!-- 搜索 -->
-    <div class="">
-      <mt-search></mt-search>
-    </div>
+    <search-box></search-box>
     <!-- 分类 -->
     <!-- 游戏 -->
     <div class="container">
@@ -44,10 +42,15 @@
 </template>
 
 <script>
+  import searchBox from '@/components/widget/searchBox.vue'
+
   export default {
     name: 'classifyIndex',
     data () {
       return {}
+    },
+    components: {
+      'search-box': searchBox
     }
   }
 </script>

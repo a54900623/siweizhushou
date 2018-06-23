@@ -2,9 +2,7 @@
 <template>
   <div class="rank-bd">
     <!-- 搜索 -->
-    <div class="">
-      <mt-search></mt-search>
-    </div>
+    <search-box></search-box>
     <!-- 排行 -->
     <!-- 游戏周排行 -->
     <div class="container">
@@ -38,6 +36,7 @@
 
 <script>
   import downloadListItem from '@/components/widget/downloadListItem.vue'
+  import searchBox from '@/components/widget/searchBox.vue'
 
   export default {
     name: 'rankIndex',
@@ -60,7 +59,8 @@
       }
     },
     components: {
-      'download-list-item': downloadListItem
+      'download-list-item': downloadListItem,
+      'search-box': searchBox
     }
   }
 </script>

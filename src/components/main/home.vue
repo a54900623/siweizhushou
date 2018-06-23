@@ -2,9 +2,7 @@
 <template>
   <div class="home-bd">
     <!-- 搜索 -->
-    <div class="">
-      <mt-search></mt-search>
-    </div>
+    <search-box></search-box>
     <!-- 游戏精品 -->
     <div class="game-classic">
       <div class="disc-tt mt-0 g-flex s-bb s-bt" @click="openModule(2)">
@@ -105,7 +103,7 @@
 </template>
 
 <script>
-  // import {Search} from 'mint-ui'
+  import searchBox from '@/components/widget/searchBox.vue'
 
   export default {
     name: 'home',
@@ -123,7 +121,7 @@
     },
     methods: {},
     components: {
-      // 'mt-search': Search
+      'search-box': searchBox
     }
   }
 </script>
