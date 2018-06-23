@@ -4,7 +4,7 @@
     <div class="hd-sch content" @click="openSearch">
       <div class="hd-bth">
         <i class="icon iconfont icon-search"></i>
-        <span>搜索商品</span>
+        <span>检索</span>
       </div>
     </div>
   </div>
