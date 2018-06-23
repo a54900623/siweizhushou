@@ -44,7 +44,7 @@ const routes = [
 ]
 
 let router = new Router({
-  mode: 'history',
+  // mode: 'history',
   base: '/siweizhushou',
   routes: routes,
   scrollBehavior (to, from, savedPosition) {

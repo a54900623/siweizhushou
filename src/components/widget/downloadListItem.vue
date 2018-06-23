@@ -46,6 +46,8 @@
         border-radius 10%
     .item-content
       float left
+      width 72%
+      width -webkit-calc(100% - 200px)
       width calc(100% - 200px)
       margin-top 30px
       padding-bottom 40px

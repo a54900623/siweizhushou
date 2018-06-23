@@ -13,8 +13,8 @@
           游戏
         </a>
       </div>
-      <ul class="apply-list-item">
-        <li class="apply-item f-cb" v-for="item in 6" :key="item">
+      <ul class="apply-list-item-new">
+        <li class="apply-item-new f-cb" v-for="item in 6" :key="item">
           <div class="item-pic">
             <img
               src="https://tse2-mm.cn.bing.net/th?id=OIP.zhvykjGi-XOzifCtwcsU2wAAAA&w=183&h=183&c=7&o=5&pid=1.7"/>
@@ -30,8 +30,8 @@
           应用
         </a>
       </div>
-      <ul class="apply-list-item">
-        <li class="apply-item f-cb" v-for="item in 6" :key="item">
+      <ul class="apply-list-item-new">
+        <li class="apply-item-new f-cb" v-for="item in 6" :key="item">
           <div class="item-pic">
             <img
               src="https://tse2-mm.cn.bing.net/th?id=OIP.zhvykjGi-XOzifCtwcsU2wAAAA&w=183&h=183&c=7&o=5&pid=1.7"/>
@@ -61,16 +61,17 @@
       padding 25px 30px
       align-items center
       font-size 30px
-    .apply-list-item
+    .apply-list-item-new
       background-color c_white
       padding-bottom 20px
-      .apply-item
+      .apply-item-new
+        width 100%
         padding 0px 20px
         background-color c_white
         .item-pic
           width 90px
           float left
-          margin-right 40px
+          margin-right 30px
           padding 10px 0px
           img
             width 90px
@@ -80,6 +81,8 @@
           float left
           height 120px
           line-height 120px
+          width 83%
+          width -webkit-calc(100% - 130px)
           width calc(100% - 130px)
           .arrow
             float right
