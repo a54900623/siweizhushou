@@ -7,6 +7,7 @@ import ClassifyIndex from '@/components/classify/index.vue'
 import RankIndex from '@/components/rank/index.vue'
 import My from '@/components/main/my.vue'
 import SearchIndex from '@/components/search/index.vue'
+import Module from '@/components/apply/apply-list.vue'
 
 Vue.use(Router)
 
@@ -46,11 +47,16 @@ const routes = [
     path: '/search',
     component: SearchIndex,
     meta: {}
+  },
+  {
+    path: '/module/:id/:name',
+    component: Module,
+    meta: {}
   }
 ]
 
 let router = new Router({
-  // mode: 'history',
+  mode: 'history',
   base: '/siweizhushou',
   routes: routes,
   scrollBehavior (to, from, savedPosition) {

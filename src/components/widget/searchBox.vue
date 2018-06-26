@@ -28,7 +28,7 @@
   }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus" rel="stylesheet/stylus" scoped>
   .hd
     /*position relative*/
     width 100%

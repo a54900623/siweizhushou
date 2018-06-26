@@ -12,12 +12,11 @@
         </a>
       </div>
       <ul class="apply-list-item-new">
-        <li class="apply-item-new f-cb" v-for="item in 6" :key="item">
+        <li class="apply-item-new f-cb" v-for="item in gameList" :key="item.name" @click="openDetail('2', item.name)">
           <div class="item-pic">
-            <img
-              src="https://tse2-mm.cn.bing.net/th?id=OIP.zhvykjGi-XOzifCtwcsU2wAAAA&w=183&h=183&c=7&o=5&pid=1.7"/>
+            <img :src="item.pic" @error="errImg" alt=""/>
           </div>
-          <div class="item-content s-bb">休闲益智<i class="arrow iconfont icon-right"></i></div>
+          <div class="item-content s-bb">{{ item.name }}<i class="arrow iconfont icon-right"></i></div>
         </li>
       </ul>
     </div>
@@ -29,12 +28,11 @@
         </a>
       </div>
       <ul class="apply-list-item-new">
-        <li class="apply-item-new f-cb" v-for="item in 6" :key="item">
+        <li class="apply-item-new f-cb" v-for="item in applyList" :key="item.name" @click="openDetail('1', item.name)">
           <div class="item-pic">
-            <img
-              src="https://tse2-mm.cn.bing.net/th?id=OIP.zhvykjGi-XOzifCtwcsU2wAAAA&w=183&h=183&c=7&o=5&pid=1.7"/>
+            <img :src="item.pic" @error="errImg" alt=""/>
           </div>
-          <div class="item-content s-bb">休闲益智<i class="arrow iconfont icon-right"></i></div>
+          <div class="item-content s-bb">{{ item.name }}<i class="arrow iconfont icon-right"></i></div>
         </li>
       </ul>
     </div>
@@ -47,7 +45,59 @@
   export default {
     name: 'classifyIndex',
     data () {
-      return {}
+      return {
+        gameList: [
+          {
+            name: '休闲益智',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/173521e1b7694f288dbe9e02151ec8ae.png'
+          },
+          {
+            name: '动作射击',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '赛车竞速',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '棋牌桌游',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '经营养成',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          }
+        ],
+        applyList: [
+          {
+            name: '社交通讯',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/173521e1b7694f288dbe9e02151ec8ae.png'
+          },
+          {
+            name: '影音播放',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '系统工具',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '拍摄美化',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '理财购物',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          }
+        ]
+      }
+    },
+    methods: {
+      openDetail (id, name) {
+        this.$router.push({
+          path: `/module/${id}/${name}`
+        })
+      }
     },
     components: {
       'search-box': searchBox

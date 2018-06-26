@@ -5,7 +5,7 @@
     <search-box></search-box>
     <!-- 游戏精品 -->
     <div class="game-classic">
-      <div class="disc-tt mt-0 g-flex s-bb s-bt" @click="openModule(2)">
+      <div class="disc-tt mt-0 g-flex s-bb s-bt" @click="openModule(1, '游戏精品')">
         <a class="g-flex-c">
           游戏精品
         </a>
@@ -29,7 +29,7 @@
     </div>
     <!-- 游戏推荐 -->
     <div class="game-recommend">
-      <div class="disc-tt g-flex s-bb s-bt" @click="openModule(2)">
+      <div class="disc-tt g-flex s-bb s-bt" @click="openModule(2, '游戏推荐')">
         <a class="g-flex-c">
           游戏推荐
         </a>
@@ -53,7 +53,7 @@
     </div>
     <!-- 应用精品 -->
     <div class="apply-classic">
-      <div class="disc-tt g-flex s-bb s-bt" @click="openModule(2)">
+      <div class="disc-tt g-flex s-bb s-bt" @click="openModule(3, '应用精品')">
         <a class="g-flex-c">
           应用精品
         </a>
@@ -77,7 +77,7 @@
     </div>
     <!-- 应用推荐 -->
     <div class="apply-recommend">
-      <div class="disc-tt g-flex s-bb s-bt" @click="openModule(2)">
+      <div class="disc-tt g-flex s-bb s-bt" @click="openModule(4, '应用推荐')">
         <a class="g-flex-c">
           应用推荐
         </a>
@@ -119,7 +119,13 @@
     },
     created: function () {
     },
-    methods: {},
+    methods: {
+      openModule (model, modelName) {
+        this.$router.push({
+          path: `/module/${model}/${modelName}`
+        })
+      }
+    },
     components: {
       'search-box': searchBox
     }

@@ -6,28 +6,28 @@
     <!-- 排行 -->
     <!-- 游戏周排行 -->
     <div class="container">
-      <div class="disc-tt mt-0 g-flex s-bb s-bt">
+      <div class="disc-tt mt-0 g-flex s-bb s-bt" @click="openDetail(1, '游戏周排行')">
         <a class="g-flex-c">
           游戏周排行
         </a>
         <p class="arrow-r">更多<i class="arrow iconfont icon-right"></i></p>
       </div>
       <ul class="apply-list-item">
-        <download-list-item :applyItem="item" :applyItemIndex="index" v-for="(item, index) in gameList"
-                            :key="item.name"></download-list-item>
+        <rank-list-item :applyItem="item" :applyItemIndex="index" v-for="(item, index) in gameList"
+                        :key="item.name"></rank-list-item>
       </ul>
     </div>
     <!-- 应用周排行 -->
     <div class="container">
-      <div class="disc-tt g-flex s-bb s-bt">
+      <div class="disc-tt g-flex s-bb s-bt" @click="openDetail(1, '应用周排行')">
         <a class="g-flex-c">
           应用周排行
         </a>
         <p class="arrow-r">更多<i class="arrow iconfont icon-right"></i></p>
       </div>
       <ul class="apply-list-item">
-        <download-list-item :applyItem="item1" :applyItemIndex="index1" v-for="(item1, index1) in applyList"
-                            :key="item1.name"></download-list-item>
+        <rank-list-item :applyItem="item1" :applyItemIndex="index1" v-for="(item1, index1) in applyList"
+                        :key="item1.name"></rank-list-item>
       </ul>
     </div>
   </div>
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-  import downloadListItem from '@/components/widget/downloadListItem.vue'
+  import rankListItem from '@/components/apply/widget/rankListItem.vue'
   import searchBox from '@/components/widget/searchBox.vue'
 
   export default {
@@ -43,23 +43,60 @@
     data () {
       return {
         gameList: [
-          {name: '王者荣耀', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/173521e1b7694f288dbe9e02151ec8ae.png'},
-          {name: '开心消消乐', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
-          {name: '超级玛丽', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
-          {name: '绝地求生', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
-          {name: '嘻嘻哈哈', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'}
+          {
+            name: '王者荣耀',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/173521e1b7694f288dbe9e02151ec8ae.png'
+          },
+          {
+            name: '开心消消乐',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '超级玛丽',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '绝地求生',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '嘻嘻哈哈',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          }
         ],
         applyList: [
-          {name: '微博', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
-          {name: '优酷', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
-          {name: '抖音', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
-          {name: '快播', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
-          {name: '快手', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'}
+          {
+            name: '微博',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '优酷',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '抖音',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '快播',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          },
+          {
+            name: '快手',
+            pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'
+          }
         ]
       }
     },
+    methods: {
+      openDetail (id, name) {
+        this.$router.push({
+          path: `/module/${id}/${name}`
+        })
+      }
+    },
     components: {
-      'download-list-item': downloadListItem,
+      'rank-list-item': rankListItem,
       'search-box': searchBox
     }
   }

@@ -1,8 +1,8 @@
+<!-- 公用组件 -->
 <template>
   <li class="apply-item f-cb">
-    <div class="item-rank">{{ applyItemIndex + 1}}</div>
     <div class="item-pic">
-      <img :src="applyItem.pic" @error="errImg" alt="" />
+      <img :src="applyItem.pic" @error="errImg" alt=""/>
     </div>
     <div class="item-content s-bb">
       <div>
@@ -16,7 +16,7 @@
 
 <script>
   export default {
-    name: 'downloadListItem',
+    name: 'rankListItem',
     data () {
       return {}
     },
@@ -24,8 +24,8 @@
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
-  @import '../../assets/css/var.styl'
+<style lang="stylus" rel="stylesheet/stylus" scoped>
+  @import '../../../assets/css/var.styl'
   .apply-item
     padding 0px 30px
     background-color c_white
@@ -46,9 +46,9 @@
         border-radius 10%
     .item-content
       float left
-      width 72%
-      width -webkit-calc(100% - 200px)
-      width calc(100% - 200px)
+      width 78%
+      width -webkit-calc(100% - 150px)
+      width calc(100% - 150px)
       margin-top 30px
       padding-bottom 40px
       .arrow
