@@ -16,7 +16,15 @@
 
 <script>
   export default {
-    name: 'searchBox'
+    name: 'searchIndex',
+    dat () {
+      return {}
+    },
+    methods: {
+      search () {
+
+      }
+    }
   }
 </script>
 

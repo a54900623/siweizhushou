@@ -6,6 +6,7 @@ import Home from '@/components/main/home.vue'
 import ClassifyIndex from '@/components/classify/index.vue'
 import RankIndex from '@/components/rank/index.vue'
 import My from '@/components/main/my.vue'
+import SearchIndex from '@/components/search/index.vue'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ const routes = [
         meta: {}
       }
     ]
+  }, {
+    // 检索
+    path: '/search',
+    component: SearchIndex,
+    meta: {}
   }
 ]
 

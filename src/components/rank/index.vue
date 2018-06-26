@@ -14,7 +14,7 @@
       </div>
       <ul class="apply-list-item">
         <download-list-item :applyItem="item" :applyItemIndex="index" v-for="(item, index) in gameList"
-                            :key="item"></download-list-item>
+                            :key="item.name"></download-list-item>
       </ul>
     </div>
     <!-- 应用周排行 -->
@@ -26,8 +26,8 @@
         <p class="arrow-r">更多<i class="arrow iconfont icon-right"></i></p>
       </div>
       <ul class="apply-list-item">
-        <download-list-item :applyItem="item" :applyItemIndex="index" v-for="(item, index) in applyList"
-                            :key="item"></download-list-item>
+        <download-list-item :applyItem="item1" :applyItemIndex="index1" v-for="(item1, index1) in applyList"
+                            :key="item1.name"></download-list-item>
       </ul>
     </div>
   </div>
@@ -45,16 +45,16 @@
         gameList: [
           {name: '王者荣耀', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/173521e1b7694f288dbe9e02151ec8ae.png'},
           {name: '开心消消乐', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
-          {name: '超级玛丽', pic: ''},
-          {name: '绝地求生', pic: ''},
-          {name: '绝地求生', pic: ''}
+          {name: '超级玛丽', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
+          {name: '绝地求生', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
+          {name: '嘻嘻哈哈', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'}
         ],
         applyList: [
-          {name: '微博', pic: ''},
-          {name: '优酷', pic: ''},
-          {name: '抖音', pic: ''},
-          {name: '快播', pic: ''},
-          {name: '快手', pic: ''}
+          {name: '微博', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
+          {name: '优酷', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
+          {name: '抖音', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
+          {name: '快播', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'},
+          {name: '快手', pic: 'http://appimg.hicloud.com/hwmarket/files/application/icon144/04359efbf4e84d8fb936f990301dd87d.png'}
         ]
       }
     },

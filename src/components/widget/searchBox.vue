@@ -1,10 +1,12 @@
 <template>
-  <!-- 搜索 -->
-  <div class="hd">
-    <div class="hd-sch content" @click="openSearch">
-      <div class="hd-bth">
-        <i class="icon iconfont icon-search"></i>
-        <span>检索</span>
+  <div class="search-bd">
+    <!-- 搜索 -->
+    <div class="hd">
+      <div class="hd-sch content" @click="openSearch">
+        <div class="hd-bth">
+          <i class="icon iconfont icon-search"></i>
+          <span>检索</span>
+        </div>
       </div>
     </div>
   </div>
@@ -12,7 +14,17 @@
 
 <script>
   export default {
-    name: 'searchBox'
+    name: 'searchBox',
+    data () {
+      return {}
+    },
+    methods: {
+      openSearch () {
+        this.$router.push({
+          path: '/search'
+        })
+      }
+    }
   }
 </script>
 
