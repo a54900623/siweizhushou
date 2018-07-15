@@ -1,5 +1,10 @@
 <template>
   <div class="apply-list-bd">
+    <mt-header :title="headerTitle">
+      <router-link to="/" slot="left">
+        <mt-button icon="back"></mt-button>
+      </router-link>
+    </mt-header>
     <!-- 搜索 -->
     <search-box></search-box>
     <ul class="apply-list-item">
@@ -18,6 +23,7 @@
     name: 'applyList',
     data () {
       return {
+        headerTitle: this.$route.params.name,
         dataList: [
           {
             name: '王者荣耀',

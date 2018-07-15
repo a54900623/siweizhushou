@@ -4,8 +4,10 @@ import '@/assets/css/font/iconfont.js'
 import '@/assets/css/mint-ui.css'
 import '@/assets/css/common.styl'
 import '@/assets/css/font/iconfont.css'
+import 'swiper/dist/css/swiper.css'
 import fastClick from 'fastClick'
 import Vue from 'vue'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 import router from './router'
 import store from './store'
 import Mint from 'mint-ui'
@@ -56,6 +58,7 @@ Vue.mixin({
     }
   }
 })
+Vue.use(VueAwesomeSwiper)
 Vue.use(Http)
 Vue.use(Mint)
 /* eslint-disable no-new */

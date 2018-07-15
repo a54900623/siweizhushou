@@ -12,7 +12,7 @@
         <p class="arrow-r">更多<i class="arrow iconfont icon-right"></i></p>
       </div>
       <ul class="game-item-list f-cb">
-        <li class="game-item s-bb" v-for="item in 4" :key="item">
+        <li class="game-item s-bb" v-for="item in 4" :key="item" @click="openDetail(item)">
           <div class="inner s-br">
             <div class="g-flex-c g-flex">
               <div class="item-pic"><img
@@ -123,6 +123,11 @@
       openModule (model, modelName) {
         this.$router.push({
           path: `/module/${model}/${modelName}`
+        })
+      },
+      openDetail (id) {
+        this.$router.push({
+          path: `apply/${id}`
         })
       }
     },
